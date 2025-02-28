@@ -16,6 +16,6 @@ class MercadolivreSpider(scrapy.Spider):
                 'name': product.css('h3.poly-component__title-wrapper a::text').get(),
                 'reviews_rating_number': product.css('span.poly-reviews__rating ::text').get(),
                 'reviews_amount': product.css('span.poly-reviews__total ::text').get(),
-                'price': product.css('h3.poly-component__title-wrapper a::text').get()
+                'price': product.css('span.andes-money-amount__fraction ::text').get()
             }
 
